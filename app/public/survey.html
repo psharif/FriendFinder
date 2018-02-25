@@ -1,13 +1,144 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>
-            Survey Page
-        </title>
+        <title>Survey Page</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     </head>
     <body>
-        <h1>
-            Survey Page
-        </h1>
+        <div class="container">
+            <h1>Survey Questions</h1>
+            <hr class="my-4">
+            <h2>About You</h2>
+            <form method="POST">
+                <div class="form-group">
+                    <strong><label for="name">Name (Required)</label></strong>
+                    <input type="text" class="form-control" id="name" placeholder="Enter Name" required>
+                </div>
+                <div class="form-group">
+                    <strong><label for="photoLink">Link To Image (Required)</label></strong>
+                    <input type="text" class="form-control" id="photoLink" placeholder="Enter URL/Link to Photo" required>
+                </div>
+                <h3>Question 1</h3>
+                <div class="form-group">
+                    <strong><label for="q1">Do You Like Animals?</label></strong>
+                    <select class="form-control" id="q1">
+                        <option value="" selected disabled hidden>Select An Option</option>
+                        <option value = "1">1 - Not At All </option>
+                        <option value = "2">2 - Not Really </option>
+                        <option value = "3">3 - I'm good Either Way</option>
+                        <option value = "4">4 - I Like them</option>
+                        <option value = "5">5 - Are You Kidding I love them. I am one.</option>
+                    </select>
+                </div>
+                <h3>Question 2</h3>
+                <div class="form-group">
+                    <strong><label for="q2">Do You Love To Travel?</label></strong>
+                    <select class="form-control" id="q2">
+                        <option value="" selected disabled hidden>Select An Option</option>
+                        <option value = "1">1 - I'm a home body</option>
+                        <option value = "2">2 - I travel when I need to</option>
+                        <option value = "3">3 - I like to but I also enjoy staying at home.</option>
+                        <option value = "4">4 - I love taking trips</option>
+                        <option value = "5">5 - I'm almost never at my house</option>
+                    </select>
+                </div>
+                <h3>Question 3</h3>
+                <div class="form-group">
+                    <label for="q3">Are You Comfortable in groups?</label>
+                    <select class="form-control" id="q3">
+                        <option value="" selected disabled hidden>Select An Option</option>
+                        <option value = "1">1 - I'm more of a loner. </option>
+                        <option value = "2">2 - Not Really </option>
+                        <option value = "3">3 - I'm good on my own or with others.</option>
+                        <option value = "4">4 - I Like Being Around Others</option>
+                        <option value = "5">5 - I can't be alone.</option>
+                    </select>
+                </div>
+                <h3>Question 4</h3>
+                <div class="form-group">
+                    <label for="q4">How active are you?</label>
+                    <select class="form-control" id="q4">
+                        <option value="" selected disabled hidden>Select An Option</option>
+                        <option value = "1">1 - I'm pretty Sedentary </option>
+                        <option value = "2">2 - I exercise a little. </option>
+                        <option value = "3">3 - I Excercise a few times a week</option>
+                        <option value = "4">4 - I'm Pretty Active</option>
+                        <option value = "5">5 - I'm Always Active.</option>
+                    </select>
+                </div>
+                <h3>Question 5</h3>
+                <div class="form-group">
+                    <label for="q5">Do You Like to Be Spontaneous?</label>
+                    <select class="form-control" id="q5">
+                        <option value="" selected disabled hidden>Select An Option</option>
+                        <option value = "1">1 - No I like to plan things out.</option>
+                        <option value = "2">2 - I prefer to know what I'm going to do In every situation.</option>
+                        <option value = "3">3 - I don't mind.</option>
+                        <option value = "4">4 - I like to be spontaneous.</option>
+                        <option value = "5">5 - I don't plan out anything.</option>
+                    </select>
+                </div>
+                <h3>Question 6</h3>
+                <div class="form-group">
+                    <label for="q6">Do You Respect Everyones Opinions</label>
+                    <select class="form-control" id="q6">
+                        <option value="" selected disabled hidden>Select An Option</option>
+                        <option value = "1">1 - Only If They Agree With Me</option>
+                        <option value = "2">2 - I Find it difficult if they think differently than me.</option>
+                        <option value = "3">3 - I Respect Everyones Opinions if they Like Mine.</option>
+                        <option value = "4">4 - I respect everyone, but I do stand up for my opinion as well.</option>
+                        <option value = "5">5 - I Respect Everyones Opinion irregardless If they respect mine.</option>
+                    </select>
+                </div>
+                <h3>Question 7</h3>
+                <div class="form-group">
+                    <label for="q7">How Easy is it to Share You feelings?</label>
+                    <select class="form-control" id="q7">
+                        <option value="" selected disabled hidden>Select An Option</option>
+                        <option value = "1">1 - Not Easy At All</option>
+                        <option value = "2">2 - I do but I seldom share them.</option>
+                        <option value = "3">3 - I think it's important on occasion</option>
+                        <option value = "4">4 - I like to discuss them often.</option>
+                        <option value = "5">5 - I express how I'm feeling all the time.</option>
+                    </select>
+                </div>
+                <h3>Question 8</h3>
+                <div class="form-group">
+                    <label for="q8">How much Do You Rely On Others?</label>
+                    <select class="form-control" id="q8">
+                        <option value="" selected disabled hidden>Select An Option</option>
+                        <option value = "1">1 - I am pretty independent.</option>
+                        <option value = "2">2 - I ask for help only if I can't find the answer on my own.</option>
+                        <option value = "3">3 - I ask for help often, but I feel better to solve things for myself.</option>
+                        <option value = "4">4 - I like it a lot when people help me, and think it makes things easier.</option>
+                        <option value = "5">5 - I prefer to be around people who will be able to show me how to do stuff.</option>
+                    </select>
+                </div>
+                <h3>Question 9</h3>
+                <div class="form-group">
+                    <label for="q9">Do You Like Change?</label>
+                    <select class="form-control" id="q9">
+                        <option value="" selected disabled hidden>Select An Option</option>
+                        <option value = "1">1 - I like when things are similar?</option>
+                        <option value = "2">2 - I don't like much change, but some is ok.</option>
+                        <option value = "3">3 - I'm ok with it.</option>
+                        <option value = "4">4 - I like change every now and then.</option>
+                        <option value = "5">5 - I embrace it.</option>
+                    </select>
+                </div>
+                <h3>Question 10</h3>
+                <div class="form-group">
+                    <label for="q10">Are You Pretty Lenient With Others?</label>
+                    <select class="form-control" id="q10">
+                        <option value="" selected disabled hidden>Select An Option</option>
+                        <option value = "1">1 - No If They Don't Respect Me, then I won't respect them.</option>
+                        <option value = "2">2 - I won't do anything, unless someone rubs me the wrong way.</option>
+                        <option value = "3">3 - I can let things slide most of the time.</option>
+                        <option value = "4">4 - I'm usually forgiving.</option>
+                        <option value = "5">5 - I rarely get upset.</option>
+                    </select>
+                </div>
+            </form>
+        </div>
     </body>
 </html>
