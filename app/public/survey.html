@@ -6,10 +6,12 @@
     </head>
     <body>
         <div class="container">
+            
             <h1>Survey Questions</h1>
-            <hr class="my-4">
+            <hr>
             <h2>About You</h2>
-            <form method="POST">
+            
+            <form>
                 <div class="form-group">
                     <strong><label for="name">Name (Required)</label></strong>
                     <input type="text" class="form-control" id="name" placeholder="Enter Name" required>
@@ -138,7 +140,12 @@
                         <option value = "5">5 - I rarely get upset.</option>
                     </select>
                 </div>
+                <button type="submit" style="width:100%" class="btn btn-primary submit">Submit</button>
             </form>
+            
         </div>
+        <script src="https://code.jquery.com/jquery.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script src="../ajax/ajax.js"></script>
     </body>
 </html>
