@@ -1,8 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
+        <meta charset="UTF-8">
         <title>Survey Page</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <!-- <script src="sample.js"></script> -->
     </head>
     <body>
         <div class="container">
@@ -146,6 +150,40 @@
         </div>
         <script src="https://code.jquery.com/jquery.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-        <script src="../ajax/ajax.js"></script>
+        <script>
+
+            $('.submit').on('click', function(e){
+                e.preventDefault();
+                postSurvey();
+            });
+
+            function postSurvey(){
+                var answerArray = [];
+
+                for(var i = 1; i <= 10; i++){
+                    var answer = $('#q' + i).val();
+                    answerArray.push(answer);
+                }
+
+                var friend = {
+                    name: $('#name').val(),
+                    photoLink: $('#photoLink').val(),
+                    survey: answerArray
+                }
+
+                $.post("/api/friends", friend, function (data){
+                    clearValues();
+                }); 
+            }
+
+            function clearValues(){
+                $('#name').val("");
+                $('#photoLink').val("");
+
+                for(var i = 1; i <= 10; i++){
+                    $('#q' + i).val("");
+                }
+            }
+        </script>
     </body>
 </html>

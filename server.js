@@ -12,10 +12,7 @@ var PORT = process.env.PORT || 8080;
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-//require("./app/routing/apiRoutes")(app);
-// var apiRoutes = require("./routes/apiRoutes")
-// console.log(apiRoutes); => [Function]
-// apiRoutes(app);
+require("./app/routing/apiRoutes")(app);
 require("./app/routing/htmlRoutes")(app);
 
 //Listens for Requests on Server Starts It
