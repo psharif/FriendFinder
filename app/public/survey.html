@@ -5,8 +5,9 @@
         <title>Survey Page</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <script src="https://code.jquery.com/jquery.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-        <!-- <script src="sample.js"></script> -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <!-- <script src="../ajax/ajax.js"></script> -->
     </head>
     <body>
         <div class="container">
@@ -144,12 +145,37 @@
                         <option value = "5">5 - I rarely get upset.</option>
                     </select>
                 </div>
-                <button type="submit" style="width:100%" class="btn btn-primary submit">Submit</button>
+                <button type="submit" style="width:100%" class="btn btn-primary submit" data-toggle="modal">Submit</button>
             </form>
+            <hr>
+            <p>
+                <a href="/">Home</a>
+                |
+                <a href="/api/friends">API Friend List</a>
+                |
+                <a href="https://github.com/psharif/FriendFinder">Git Hub Repo</a>  
+            <p>
+        <!-- Modal -->
+            <div class="modal fade" id="friendModal">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="friendModalTitle">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body" id="friend-modal-body" style="width:100%">
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
             
         </div>
-        <script src="https://code.jquery.com/jquery.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <!-- <script src="https://code.jquery.com/jquery.js"></script> -->
         <script>
 
             $('.submit').on('click', function(e){
@@ -172,6 +198,12 @@
                 }
 
                 $.post("/api/friends", friend, function (data){
+                    console.log(data);
+                    var newImage = $('<img>');
+                    newImage.attr('src', data.photoLink);
+                    $("#friend-modal-body").append(newImage);
+                    $("#friendModalTitle").text(data.name);
+                    $('#friendModal').modal('toggle');
                     clearValues();
                 }); 
             }
