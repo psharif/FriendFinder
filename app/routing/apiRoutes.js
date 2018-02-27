@@ -4,9 +4,9 @@ function getDifference(survey1, survey2){
 	var difference = 0;
 
 	survey1.forEach(function(el, index){
-		if(el === "" || survey2[index] === ""){
+		if(el !== "" || survey2[index] !== ""){
+			difference += Math.abs(parseInt(el) - parseInt(survey2[index]));
 		}
-		difference += Math.abs(parseInt(el) - parseInt(survey2[index]));
 	});
 	return difference; 
 }
@@ -18,8 +18,8 @@ function findMatch(newFriend){
 		differences.push(getDifference(el.survey, newFriend.survey));
 	});
 
-	var small = differences.sort()[0];
-
+	var small = differences.sort(function(a, b){return a-b})[0];
+	console.log(small);
 	friendsData.forEach(function(el){
 		if(small === getDifference(el.survey, newFriend.survey)){
 			match = el;
