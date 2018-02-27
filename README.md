@@ -14,8 +14,8 @@ Matching App (Dating APP) That uses a users responses from a survey to calculate
 ## Survey Route
 
 ### localhost:8080/survey
-* Displays A Survery Form for users to fill out to find their match. 
-* Once the survey is completed their match will be displayed. 
+* Displays a Survey Form for Users to fill out to find their match. 
+* Once the Survey is completed their Match will be displayed. 
 
 ![bamazonCustomer gif](/README_GIFS/survey.gif)
 
@@ -30,7 +30,7 @@ Matching App (Dating APP) That uses a users responses from a survey to calculate
 
 ### localhost:8080/* (Anything else localhost:8080/[Anything else])
 
-* Shows The Home Page for the Friend Finder App. Just a landing page for the user. 
+* Shows The Home Page for the Friend Finder App. Just a Landing Page for the user. 
 
 ![bamazonCustomer gif](/README_GIFS/home.gif)
 
