@@ -11,25 +11,26 @@ Matching App (Dating APP) That uses a users responses from a survey to calculate
  * __"cd [directory-name]"__ of the directory where the __"server.js"__ file is. 
  * use __"node server.js"__ or __"nodemon server.js"__ to start the server
 
-## Routes
+## Survey Route
 
 ### localhost:8080/survey
-* Displays A Survery Form for users to fill out to find their match. 
-* Once the survey is completed their match will be displayed. 
-
+* Displays a Survey Form for Users to fill out to find their match. 
+* Once the Survey is completed their Match will be displayed. 
 
 ![bamazonCustomer gif](/README_GIFS/survey.gif)
 
+## API Route
 
 ### localhost:8080/api/friends
 * Shows JSON Data of the Friends List on the server. 
 
 ![bamazonCustomer gif](/README_GIFS/api.gif)
 
+## Home Route (Any Other Route)
 
 ### localhost:8080/* (Anything else localhost:8080/[Anything else])
 
-* Shows The Home Page for the Friend Finder App. Just a landing page for the user. 
+* Shows The Home Page for the Friend Finder App. Just a Landing Page for the user. 
 
 ![bamazonCustomer gif](/README_GIFS/home.gif)
 
